@@ -1,0 +1,27 @@
+USE `bd2401`;
+-- Criando o Scheama do BD
+-- create schema `BD2401`;
+-- Excluindo o banco 
+-- DROP DATABASE `BD2401`;
+-- Criando a Tabela
+CREATE TABLE `bd2401`.`NEW_TABLE`(
+	`ID_MEMBER` INT NOT NULL AUTO_INCREMENT,
+    `FIRST_NAME` VARCHAR (20) NOT NULL,
+    `ACTIVE`BIT(1) NULL DEFAULT 1, 
+    `WHEN_ADDED` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+    `LAST_MODIFIED`TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`ID_MEMBER`)
+);
+
+-- inserindo  dados na tabela 
+INSERT INTO `bd2401` . `NEW_TABLE` (`FIRST_NAME`)
+VALUES(`Vinicius Fantin`);
+
+INSERT INTO `bd2401` . `NEW_TABLE` (`FIRST_NAME`, `ACTIVE`)
+VALUE(`Besta Feira`, 0);
+
+INSERT INTO `bd2401` . `NEW_TABLE` (`FIRST_NAME`, `ACTIVE`)
+VALUES(`Mirian Menezes`, 0);
+
+-- Exibindo/consultando dados
+SELECT * FROM `bd2401` . `NEW_TABLE`
